@@ -98,7 +98,7 @@ class FileWorkerTest {
         final Thread thread = new Thread(worker);
         thread.start();
 
-        Thread.sleep(100);
+        Thread.sleep(20);
         thread.interrupt();
         thread.join(1000);
 
@@ -114,7 +114,7 @@ class FileWorkerTest {
         final Thread thread = new Thread(worker);
         thread.start();
 
-        Thread.sleep(200);
+        Thread.sleep(30);
         thread.interrupt();
         thread.join(1000);
 
@@ -137,7 +137,7 @@ class FileWorkerTest {
             threads[i].start();
         }
 
-        Thread.sleep(200);
+        Thread.sleep(30);
 
         for (final Thread thread : threads) {
             thread.interrupt();
@@ -155,7 +155,7 @@ class FileWorkerTest {
         final Thread thread = new Thread(worker);
         thread.start();
 
-        Thread.sleep(100);
+        Thread.sleep(20);
         thread.interrupt();
         thread.join(1000);
 
@@ -200,7 +200,7 @@ class FileWorkerTest {
         final Thread thread = new Thread(worker);
         thread.start();
 
-        Thread.sleep(150);
+        Thread.sleep(30);
         thread.interrupt();
         thread.join(1000);
 
@@ -229,7 +229,7 @@ class FileWorkerTest {
             thread.setName("SeqWorker-" + i);
             thread.start();
 
-            Thread.sleep(100);
+            Thread.sleep(20);
             thread.interrupt();
             thread.join(1000);
         }
@@ -246,7 +246,7 @@ class FileWorkerTest {
         thread.setName("ProgressTest");
         thread.start();
 
-        Thread.sleep(300);
+        Thread.sleep(50);
         thread.interrupt();
         thread.join(1000);
 

@@ -168,7 +168,7 @@ class CleanDiskTest {
         });
 
         wipeThread.start();
-        Thread.sleep(200);
+        Thread.sleep(50);
         wipeThread.interrupt();
         wipeThread.join(2000);
 
@@ -287,7 +287,7 @@ class CleanDiskTest {
         });
 
         wipeThread.start();
-        Thread.sleep(150);
+        Thread.sleep(30);
         wipeThread.interrupt();
         wipeThread.join(2000);
 
@@ -312,7 +312,7 @@ class CleanDiskTest {
         });
 
         wipeThread.start();
-        Thread.sleep(300);
+        Thread.sleep(50);
         wipeThread.interrupt();
         wipeThread.join(3000);
 
