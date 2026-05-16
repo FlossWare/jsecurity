@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2] - 2026-05-15
+
+### Added
+- GitHub Actions CD-CI workflow for automated builds
+- Automatic version bumping on push to master branch
+- Deployment pipeline to packagecloud.io (flossware/java/maven2)
+- Automatic git tagging for releases
+- Maven SCM integration for version control operations
+
+### Changed
+- Artifact naming from jSecurity to jsecurity
+- Version format from X.Y.Z to X.Y (matches jcollections project)
+- All documentation references updated from "jSecurity" to "jsecurity"
+- Enhanced .gitignore for Maven versioning artifacts
+
 ## [1.0] - 2026-05-15
 
 ### Added
@@ -57,5 +72,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Blocked dangerous system directories: `/`, `/bin`, `/boot`, `/dev`, `/etc`, `/lib`, `/lib64`, `/proc`, `/root`, `/sbin`, `/sys`, `/usr`, `/var`, `/home`, `/Users`
 - Windows protected paths: `C:\`, `C:\Windows`, `C:\Program Files`
 
+[1.2]: https://github.com/FlossWare/jsecurity/compare/v1.0...v1.2
 [1.0]: https://github.com/FlossWare/jsecurity/compare/v0.1...v1.0
 [0.1.0]: https://github.com/FlossWare/jsecurity/releases/tag/v0.1.0

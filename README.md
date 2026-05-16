@@ -180,6 +180,17 @@ This project is licensed under the GNU General Public License v3.0 or later.
 
 See [LICENSE](LICENSE) for the full license text.
 
+## Continuous Integration / Deployment
+
+This project uses GitHub Actions for automated builds and deployment:
+
+- **Automated Versioning** - Version automatically increments on push to master (X.Y format)
+- **Automated Building** - Compiles and packages on every push
+- **Automated Tagging** - Creates git tags for each release
+- **Automated Deployment** - Publishes to packagecloud.io (flossware/java/maven2)
+
+View build status: https://github.com/FlossWare/jsecurity/actions
+
 ## Contributing
 
 Contributions are welcome! Please:
@@ -188,6 +199,8 @@ Contributions are welcome! Please:
 3. Add tests for new functionality
 4. Ensure all tests pass (`mvn test`)
 5. Submit a pull request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## Security Considerations
 
