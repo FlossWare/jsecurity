@@ -184,7 +184,7 @@ See [LICENSE](LICENSE) for the full license text.
 
 This project uses GitHub Actions for automated builds and deployment:
 
-- **Automated Versioning** - Version automatically increments on push to master (X.Y format)
+- **Automated Versioning** - Version automatically increments on push to main (X.Y format)
 - **Automated Building** - Compiles and packages on every push
 - **Automated Tagging** - Creates git tags for each release
 - **Automated Deployment** - Publishes to packagecloud.io (flossware/java/maven2)
