@@ -23,6 +23,14 @@
     <url>https://github.com/FlossWare/jsecurity</url>
   </scm>
 
+  <distributionManagement>
+    <repository>
+      <id>packagecloud-flossware</id>
+      <name>packagecloud-flossware</name>
+      <url>https://packagecloud.io/flossware/java/maven2/</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>

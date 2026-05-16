@@ -24,6 +24,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Preparing settings.xml
+        uses: s4u/maven-settings-action@v3.1.0
+        with:
+          githubServer: false
+          servers: |
+            [
+              {
+                "id": "packagecloud-flossware",
+                "configuration": {
+                  "httpHeaders": {
+                    "property": {
+                      "name": "Authorization",
+                      "value": "Bearer ${{ secrets.PACKAGECLOUD_TOKEN }}"
+                    }
+                  }
+                }
+              }
+            ]
+
       - name: Setup .gitconfig for version bumps
         uses: oleksiyrudenko/gha-git-credentials@latest
         with:
@@ -38,6 +57,9 @@ jobs:
 
       - name: Building and packaging
         run: "mvn -U clean package -DskipTests"
+
+      - name: Deploy to packagecloud.io
+        run: "mvn -DskipTests deploy"
 
       - name: Checkin and tag to github
         run: "mvn scm:checkin scm:tag"
